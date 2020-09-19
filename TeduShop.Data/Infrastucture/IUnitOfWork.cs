@@ -1,6 +1,6 @@
 ﻿namespace TeduShop.Data.Infrastucture
 {
-    public interface IUnitOfWord
+    public interface IUnitOfWork
     {
         void Commit();
     }
