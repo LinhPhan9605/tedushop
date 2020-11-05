@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A79C7DF-AF4C-4843-BCFE-8F8788828CF7}</ProjectGuid>
+    <ProjectGuid>{E3C6770F-75B0-4930-87F5-B72757316ED5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeduShop.Data</RootNamespace>
-    <AssemblyName>TeduShop.Data</AssemblyName>
+    <RootNamespace>ClassLibrary2</RootNamespace>
+    <AssemblyName>ClassLibrary2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,48 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\DbFactory.cs" />
-    <Compile Include="Infrastructure\Disposable.cs" />
-    <Compile Include="Infrastructure\IDbFactory.cs" />
-    <Compile Include="Infrastructure\IRepository.cs" />
-    <Compile Include="Infrastructure\IUnitOfWork.cs" />
-    <Compile Include="Infrastructure\RepositoryBase.cs" />
-    <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\202011030218322_ShopBD.cs" />
-    <Compile Include="Migrations\202011030218322_ShopBD.designer.cs">
-      <DependentUpon>202011030218322_ShopBD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011030224549_newDB.cs" />
-    <Compile Include="Migrations\202011030224549_newDB.designer.cs">
-      <DependentUpon>202011030224549_newDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\BillInfo.cs" />
+    <Compile Include="Models\BillOrder.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Delivery.cs" />
+    <Compile Include="Models\DeliveryInfo.cs" />
+    <Compile Include="Models\levelAccount.cs" />
+    <Compile Include="Models\Migrations.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Produce.cs" />
+    <Compile Include="Models\Provider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ProductCategoryRepository.cs" />
-    <Compile Include="Repositories\ProductRepository.cs" />
-    <Compile Include="TeduShopDbContext.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
-      <Project>{b81cf9db-cd4a-4d89-a9e7-f1b6d503e0f7}</Project>
-      <Name>TeduShop.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj">
-      <Project>{40e70ba2-0e1f-4a4d-812f-f6808ada2f8b}</Project>
-      <Name>TeduShop.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011030218322_ShopBD.resx">
-      <DependentUpon>202011030218322_ShopBD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011030224549_newDB.resx">
-      <DependentUpon>202011030224549_newDB.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
