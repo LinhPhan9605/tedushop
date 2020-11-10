@@ -58,7 +58,7 @@
       <Name>TeduShop.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\TeduShop.Data\TeduShop.Data.csproj">
-      <Project>{2398d430-cd06-4e4c-af17-e9d7770bfcfd}</Project>
+      <Project>{8a79c7df-af4c-4843-bcfe-8f8788828cf7}</Project>
       <Name>TeduShop.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj">
@@ -73,6 +73,9 @@
       <Project>{9e4730e3-e80e-4a60-a930-7f871474dd26}</Project>
       <Name>TeduShop.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
